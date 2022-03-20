@@ -1,12 +1,13 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   background: linear-gradient(#615dad, #ffc8da) fixed;
   width: min-content;
   margin: 20px auto 0 auto;
 }
+
+/* Instrukce - foto + text*/
 .instrukce {
   display: flex;
   flex-direction: column;
@@ -24,25 +25,26 @@ body {
   font-family: 'Courier New', Courier, monospace; /* tento font, aby to bylo peknejsi, ackoliv ne podle zadani :)*/
   color: #ffffff;
   text-align: center;
-  padding: 0 30px;
+  padding: 0 40px;
 }
 .instrukce__foto {
-  width: 450px;
+  height: 300px;
   border-radius: 10px 10px 0 0;
 }
+
+/* Instrukce - tlačítka */
 .instrukce__buttons {
-  font-family: 'Courier New', Courier, monospace;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 450px;
+  font-family: 'Courier New', Courier, monospace;
   text-align: center;
 }
 .instrukce__pravidla-btn {
   background-color: #1fcca4;
-  padding: 10px;
-  text-decoration: none;
   color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
 }
 .instrukce__pravidla-btn:hover {
   background-color: #1cbb96;
@@ -50,10 +52,10 @@ body {
 }
 .instrukce__start-btn {
   background-color: #0197f6;
+  color: #ffffff;
+  text-decoration: none;
   padding: 10px;
   border-radius: 0 0 10px 10px;
-  text-decoration: none;
-  color: #ffffff;
 }
 .instrukce__start-btn:hover {
   background-color: #0090e9;
