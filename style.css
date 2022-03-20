@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(#615dad, #ffc8da) fixed;
+  width: min-content;
+  margin: 20px auto 0 auto;
+}
+.instrukce {
+  display: flex;
+  flex-direction: column;
+  background-color: #283e50;
+  color: #ffffff;
+  border-radius: 10px;
+}
+.instrukce__nadpis {
+  font-family: 'Lobster';
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.instrukce__text {
+  font-family: 'Courier New', Courier, monospace; /* tento font, aby to bylo peknejsi, ackoliv ne podle zadani :)*/
+  color: #ffffff;
+  text-align: center;
+  padding: 0 30px;
+}
+.instrukce__foto {
+  width: 450px;
+  border-radius: 10px 10px 0 0;
+}
+.instrukce__buttons {
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 450px;
+  text-align: center;
+}
+.instrukce__pravidla-btn {
+  background-color: #1fcca4;
+  padding: 10px;
+  text-decoration: none;
+  color: #ffffff;
+}
+.instrukce__pravidla-btn:hover {
+  background-color: #1cbb96;
+  cursor: pointer;
+}
+.instrukce__start-btn {
+  background-color: #0197f6;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  text-decoration: none;
+  color: #ffffff;
+}
+.instrukce__start-btn:hover {
+  background-color: #0090e9;
+  cursor: pointer;
+}
