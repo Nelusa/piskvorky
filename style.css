@@ -3,17 +3,17 @@
 }
 body {
   background: linear-gradient(#615dad, #ffc8da) fixed;
-  width: min-content;
-  margin: 20px auto 0 auto;
 }
 
-/* Instrukce - foto + text*/
+/* INSTRUKCE - foto + text*/
 .instrukce {
   display: flex;
   flex-direction: column;
   background-color: #283e50;
   color: #ffffff;
   border-radius: 10px;
+  max-width: 30rem;
+  margin: 20px auto 0 auto;
 }
 .instrukce__nadpis {
   font-family: 'Lobster';
@@ -32,7 +32,7 @@ body {
   border-radius: 10px 10px 0 0;
 }
 
-/* Instrukce - tlačítka */
+/* INSTRUKCE - tlačítka */
 .instrukce__buttons {
   display: flex;
   flex-direction: column;
@@ -40,24 +40,52 @@ body {
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
 }
-.instrukce__pravidla-btn {
+.instrukce__pravidla--btn {
   background-color: #1fcca4;
   color: #ffffff;
   text-decoration: none;
   padding: 10px;
 }
-.instrukce__pravidla-btn:hover {
+.instrukce__pravidla--btn:hover {
   background-color: #1cbb96;
   cursor: pointer;
 }
-.instrukce__start-btn {
+.instrukce__start--btn {
   background-color: #0197f6;
   color: #ffffff;
   text-decoration: none;
   padding: 10px;
   border-radius: 0 0 10px 10px;
 }
-.instrukce__start-btn:hover {
+.instrukce__start--btn:hover {
   background-color: #0090e9;
   cursor: pointer;
+}
+
+/* PRAVIDLA */
+
+.pravidla {
+  display: flex;
+  flex-direction: column;
+  background-color: #283e50;
+  color: #ffffff;
+  border-radius: 10px;
+  max-width: 30rem;
+  margin: 20px auto 0 auto;
+}
+.pravidla__nadpis {
+  font-family: 'Lobster';
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.pravidla__seznam {
+  padding: 0rem 0rem 0rem 3rem;
+  font-size: 10px;
+}
+
+.pravidla__seznam li {
+  font-family: 'Courier New', Courier, monospace; /* tento font, aby to bylo peknejsi, ackoliv ne podle zadani :)*/
+  padding: 0 1rem;
+  line-height: 1.2rem;
 }
