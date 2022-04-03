@@ -77,15 +77,59 @@ body {
   font-family: 'Lobster';
   font-size: 40px;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .pravidla__seznam {
   padding: 0rem 0rem 0rem 3rem;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .pravidla__seznam li {
   font-family: 'Courier New', Courier, monospace; /* tento font, aby to bylo peknejsi, ackoliv ne podle zadani :)*/
-  padding: 0 1rem;
-  line-height: 1.2rem;
+  padding: 0.3rem 1rem;
+}
+
+.pravidla__icons {
+  width: 1em;
+  height: 1em;
+  filter: invert(100%);
+}
+
+.pravidla__obrazky--img {
+  width: 100%;
+}
+
+figcaption {
+  font-style: italic;
+  font-size: 15px;
+  padding: 5px 0 15px 0;
+  text-align: center;
+}
+.pravidla__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+.pravidla__instrukce--btn {
+  background-color: #1fcca4;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+}
+.pravidla__instrukce--btn:hover {
+  background-color: #1cbb96;
+  cursor: pointer;
+}
+.pravidla__start--btn {
+  background-color: #0197f6;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+}
+.pravidla__start--btn:hover {
+  background-color: #0090e9;
+  cursor: pointer;
 }
