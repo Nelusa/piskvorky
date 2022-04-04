@@ -12,7 +12,7 @@ body {
   background-color: #283e50;
   color: #ffffff;
   border-radius: 10px;
-  max-width: 30rem;
+  max-width: 40em;
   margin: 20px auto 0 auto;
 }
 .instrukce__nadpis {
@@ -70,7 +70,6 @@ body {
   background-color: #283e50;
   color: #ffffff;
   border-radius: 10px;
-  max-width: 30rem;
   margin: 20px auto 0 auto;
 }
 .pravidla__nadpis {
@@ -80,13 +79,13 @@ body {
   margin-bottom: 20px;
 }
 .pravidla__seznam {
-  padding: 0rem 0rem 0rem 3rem;
-  font-size: 12px;
+  padding: 0em 0em 0em 4em;
+  font-size: 13px;
 }
 
 .pravidla__seznam li {
   font-family: 'Courier New', Courier, monospace; /* tento font, aby to bylo peknejsi, ackoliv ne podle zadani :)*/
-  padding: 0.3rem 1rem;
+  padding: 0.3em 1em;
 }
 
 .pravidla__icons {
@@ -94,14 +93,27 @@ body {
   height: 1em;
   filter: invert(100%);
 }
-
-.pravidla__obrazky--img {
-  width: 100%;
+.pravidla__obrazky {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 2em;
 }
 
+.pravidla__obrazky--img img {
+  width: 100%;
+  display: block;
+}
+
+figure {
+  margin: 0.8em;
+  padding: 0 0.4em;
+}
 figcaption {
+  font-family: 'Titillium Web', sans-serif;
   font-style: italic;
-  font-size: 15px;
+  font-size: 1em;
+  color: lightgrey;
   padding: 5px 0 15px 0;
   text-align: center;
 }
@@ -132,4 +144,54 @@ figcaption {
 .pravidla__start--btn:hover {
   background-color: #0090e9;
   cursor: pointer;
+}
+
+/* Responzivita */
+
+@media (min-width: 350px) {
+  .pravidla {
+    max-width: 20em;
+  }
+  .pravidla__obrazky {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .pravidla__obrazky--img {
+    max-width: 80%;
+    margin: auto;
+  }
+  figure {
+    margin: 0.6em;
+    padding: 0 0.3em;
+  }
+  figcaption {
+    font-size: 1em;
+  }
+}
+@media (min-width: 700px) {
+  .pravidla {
+    max-width: 30em;
+  }
+  .pravidla__obrazky--img {
+    width: calc(100% / 2);
+    max-width: 100%;
+    margin: 0;
+  }
+  figcaption {
+    font-size: 0.8em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .pravidla {
+    max-width: 40em;
+  }
+  .pravidla__obrazky--img {
+    width: calc(100% / 2);
+    max-width: 100%;
+    margin: 0;
+  }
+  figcaption {
+    font-size: 0.8em;
+  }
 }
