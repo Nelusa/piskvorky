@@ -226,6 +226,7 @@ figcaption {
   font-family: 'Courier New', Courier, monospace;
   font-weight: 700;
   font-size: 1.2em;
+  text-transform: uppercase;
   margin-left: 0.1em;
 }
 
