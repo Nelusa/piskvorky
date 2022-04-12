@@ -195,3 +195,105 @@ figcaption {
     font-size: 0.8em;
   }
 }
+
+/* Hra */
+
+.hra {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  border-radius: 10px;
+  margin: 0 auto;
+  max-width: 70vmin;
+}
+
+.hra__nadpis {
+  font-family: 'Lobster';
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.hra__navigace {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  align-items: center;
+}
+.hra__player {
+  display: flex;
+  align-items: center;
+}
+.hra__player--actual {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.hra__icons {
+  width: 1.3em;
+  height: 1.3em;
+  filter: invert(100%);
+  margin-left: 1em;
+  margin-bottom: 0.1em;
+}
+
+.hra__buttons {
+  display: flex;
+  align-items: center;
+}
+.hra__domu--btn {
+  height: 2.5em;
+  width: 2.5em;
+  aspect-ratio: 1/1;
+  background-color: #1fcca4;
+  color: #ffffff;
+  padding: 11px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.hra__domu--btn:hover {
+  background-color: #1cbb96;
+  cursor: pointer;
+}
+.hra__znovu--btn {
+  height: 2.5em;
+  width: 2.5em;
+  aspect-ratio: 1/1;
+  background-color: #0197f6;
+  color: #ffffff;
+  padding: 11px;
+  border-radius: 10px;
+}
+.hra__znovu--btn:hover {
+  background-color: #0090e9;
+  cursor: pointer;
+}
+
+.hra__domu--img,
+.hra__znovu--img {
+  height: 1em;
+  width: 1em;
+}
+
+/* Herní plocha*/
+
+.hra__area {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px auto 0 auto;
+}
+
+.area__btn {
+  width: calc(100% / 10);
+  border: 0.9px solid #283e50;
+  aspect-ratio: 1/1;
+  /* background: linear-gradient(#c2c2f3, #f9e0e8) fixed; */
+  background-color: white;
+  opacity: 0.5;
+}
+.area__btn:hover,
+.area__btn:focus {
+  cursor: pointer;
+  background-color: white;
+  opacity: 0.7;
+}
