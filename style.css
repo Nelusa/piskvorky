@@ -202,21 +202,20 @@ figcaption {
   display: flex;
   flex-direction: column;
   color: #ffffff;
-  border-radius: 10px;
   margin: 0 auto;
-  max-width: 70vmin;
+  max-width: 70vmin; /* vím, že v zadání bylo 80vmin, ale takto mi to přišlo přehlednější na celé obrazovce */
 }
 
 .hra__nadpis {
   font-family: 'Lobster';
   font-size: 40px;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 0.5em;
 }
 .hra__navigace {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 10px;
+  padding-bottom: 0.5em;
   align-items: center;
 }
 .hra__player {
@@ -227,13 +226,14 @@ figcaption {
   font-family: 'Courier New', Courier, monospace;
   font-weight: 700;
   font-size: 1.2em;
+  margin-left: 0.1em;
 }
 
 .hra__icons {
   width: 1.3em;
   height: 1.3em;
   filter: invert(100%);
-  margin-left: 1em;
+  margin-left: 0.8em;
   margin-bottom: 0.1em;
 }
 
@@ -247,9 +247,9 @@ figcaption {
   aspect-ratio: 1/1;
   background-color: #1fcca4;
   color: #ffffff;
-  padding: 11px;
-  margin-right: 10px;
-  border-radius: 10px;
+  padding: 0.7em;
+  margin-right: 0.5em;
+  border-radius: 0.5em;
 }
 .hra__domu--btn:hover {
   background-color: #1cbb96;
@@ -261,8 +261,8 @@ figcaption {
   aspect-ratio: 1/1;
   background-color: #0197f6;
   color: #ffffff;
-  padding: 11px;
-  border-radius: 10px;
+  padding: 0.7em;
+  border-radius: 0.5em;
 }
 .hra__znovu--btn:hover {
   background-color: #0090e9;
@@ -280,14 +280,13 @@ figcaption {
 .hra__area {
   display: flex;
   flex-wrap: wrap;
-  margin: 0px auto 0 auto;
+  margin: 0 auto;
 }
 
 .area__btn {
   width: calc(100% / 10);
   border: 0.9px solid #283e50;
   aspect-ratio: 1/1;
-  /* background: linear-gradient(#c2c2f3, #f9e0e8) fixed; */
   background-color: white;
   opacity: 0.5;
 }
