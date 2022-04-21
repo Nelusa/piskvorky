@@ -198,7 +198,7 @@ figcaption {
 
 /* Hra */
 
-.hra {
+.game {
   display: flex;
   flex-direction: column;
   color: #ffffff;
@@ -206,23 +206,23 @@ figcaption {
   max-width: 70vmin; /* vím, že v zadání bylo 80vmin, ale takto mi to přišlo přehlednější na celé obrazovce */
 }
 
-.hra__nadpis {
+.game__title {
   font-family: 'Lobster';
   font-size: 40px;
   text-align: center;
   margin-bottom: 0.5em;
 }
-.hra__navigace {
+.game__navigation {
   display: flex;
   justify-content: space-between;
   padding-bottom: 0.5em;
   align-items: center;
 }
-.hra__player {
+.game__player {
   display: flex;
   align-items: center;
 }
-.hra__player--actual {
+.game__player--actual {
   font-family: 'Courier New', Courier, monospace;
   font-weight: 700;
   font-size: 1.2em;
@@ -230,7 +230,7 @@ figcaption {
   margin-left: 0.1em;
 }
 
-.hra__icons {
+.game__icons {
   width: 1.3em;
   height: 1.3em;
   filter: invert(100%);
@@ -238,11 +238,11 @@ figcaption {
   margin-bottom: 0.1em;
 }
 
-.hra__buttons {
+.game__buttons {
   display: flex;
   align-items: center;
 }
-.hra__domu--btn {
+.game__home--btn {
   height: 2.5em;
   width: 2.5em;
   aspect-ratio: 1/1;
@@ -252,11 +252,11 @@ figcaption {
   margin-right: 0.5em;
   border-radius: 0.5em;
 }
-.hra__domu--btn:hover {
+.game__home--btn:hover {
   background-color: #1cbb96;
   cursor: pointer;
 }
-.hra__znovu--btn {
+.game__repeat--btn {
   height: 2.5em;
   width: 2.5em;
   aspect-ratio: 1/1;
@@ -265,20 +265,20 @@ figcaption {
   padding: 0.7em;
   border-radius: 0.5em;
 }
-.hra__znovu--btn:hover {
+.game__repeat--btn:hover {
   background-color: #0090e9;
   cursor: pointer;
 }
 
-.hra__domu--img,
-.hra__znovu--img {
+.game__home--img,
+.game__repeat--img {
   height: 1em;
   width: 1em;
 }
 
 /* Herní plocha*/
 
-.hra__area {
+.game__area {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
