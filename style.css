@@ -230,14 +230,6 @@ figcaption {
   margin-left: 0.1em;
 }
 
-.game__icons {
-  width: 1.3em;
-  height: 1.3em;
-  filter: invert(100%);
-  margin-left: 0.8em;
-  margin-bottom: 0.1em;
-}
-
 .game__buttons {
   display: flex;
   align-items: center;
@@ -276,6 +268,33 @@ figcaption {
   width: 1em;
 }
 
+/* Hra */
+
+button {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10%;
+}
+
+.game__icons {
+  width: 1.3em;
+  height: 1.3em;
+  filter: invert(100%);
+  margin-left: 0.8em;
+  margin-bottom: 0.1em;
+}
+
+.area__field--circle {
+  background: url('podklady/circle.svg') no-repeat center;
+  background-size: 70%;
+  transition: background-size 0.45s;
+}
+
+.area__field--cross {
+  background: url('podklady/cross.svg') no-repeat center;
+  background-size: 70%;
+  transition: background-size 0.45s;
+}
 /* Herní plocha*/
 
 .game__area {
@@ -288,12 +307,10 @@ figcaption {
   width: calc(100% / 10);
   border: 0.9px solid #283e50;
   aspect-ratio: 1/1;
-  background-color: white;
-  opacity: 0.5;
+  background-color: rgb(255, 255, 255, 0.5);
 }
 .area__btn:hover,
 .area__btn:focus {
   cursor: pointer;
-  background-color: white;
-  opacity: 0.7;
+  background-color: rgb(255, 255, 255, 0.7);
 }
