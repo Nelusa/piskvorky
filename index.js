@@ -21,20 +21,23 @@ for (let i = 0; i < gameArea.length; i += 1) {
 
     if (isWinningMove(gameArea[i]) === true) {
       if (playerOnTurn === 'circle') {
-        setTimeout(() => {
-          alert('Vyhrál jsi, křížku! 🥳');
-        }, 222);
+        let winnerAlert = () => {
+          confirm('Vyhrál jsi, křížku! 🥳');
+          location.reload();
+        };
+        setTimeout(winnerAlert, 333);
         return;
       }
       if (playerOnTurn === 'cross') {
-        setTimeout(() => {
-          alert('Vyhrál jsi, kroužku! 🥳');
-        }, 222);
+        const winnerAlert = () => {
+          confirm('Vyhrál jsi, kroužku! 🥳');
+          location.reload();
+        };
+        setTimeout(winnerAlert, 333);
       }
     }
   });
 }
-
 // Výhra //
 
 const getSymbol = (field) => {
@@ -71,7 +74,7 @@ const isWinningMove = (field) => {
 
   let i;
 
-  let inRow = 1; // Jednička pro právě vybrané políčko
+  let inRow = 1;
 
   // Koukni doleva
   i = origin.column;
@@ -113,6 +116,82 @@ const isWinningMove = (field) => {
     i++;
   }
   if (inColumn >= symbolsToWin) {
+    return true;
+  }
+
+  // BONUS //
+  let x;
+  let y;
+
+  // DIAGONÁLA 1
+  let inDiagonal1 = 1;
+
+  // (A) Koukni do levého horního rohu
+
+  // (i) vlevo + (ii) nahoru
+  x = origin.row;
+  y = origin.column;
+
+  while (x > 0 && y > 0 && symbol === getSymbol(getField(x - 1, y - 1))) {
+    inDiagonal1++;
+    x--;
+    y--;
+  }
+
+  // (B) Koukni do pravého dolního rohu
+
+  // (i) vpravo + (ii) dolů
+  while (
+    x < boardSize - 1 &&
+    y < boardSize - 1 &&
+    symbol === getSymbol(getField(y + 1, x + 1))
+  ) {
+    inDiagonal1++;
+    x++;
+    y++;
+  }
+
+  if (inDiagonal1 >= symbolsToWin) {
+    return true;
+  }
+
+  //--------------------------------------//
+
+  // DIAGONÁLA 2
+  let inDiagonal2 = 1;
+
+  // (A) Koukni do pravého horního rohu
+
+  // (i) vpravo + (ii) nahoru
+  x = origin.row;
+  y = origin.column;
+
+  while (
+    y < boardSize - 1 &&
+    x > 0 &&
+    symbol === getSymbol(getField(x - 1, y + 1))
+  ) {
+    inDiagonal2++;
+    x--;
+    y++;
+  }
+
+  // (B) Koukni do levého dolního rohu
+
+  // (i) vlevo + (ii) dolů
+  x = origin.row;
+  y = origin.column;
+  while (
+    x < boardSize - 1 &&
+    y > 0 &&
+    symbol === getSymbol(getField(x + 1, y - 1))
+  ) {
+    inDiagonal2++;
+    x++;
+    y--;
+  }
+
+  if (inDiagonal2 >= symbolsToWin) {
     return true;
   }
 
