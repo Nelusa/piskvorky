@@ -116,45 +116,5 @@ const isWinningMove = (field) => {
     return true;
   }
 
-  /*//Pokus o bonus :D
-
-  let inDiagonal1 = 1;
-
-  // Koukni do levého horního rohu
-  i = origin.column;
-  i = origin.row;
-
-  // (a) vlevo; (b) nahoru
-  while (
-    i > 0 &&
-    symbol ===
-      getSymbol(
-        getField(origin.row, i - 1) &&
-          getSymbol(getField(i - 1, origin.column)),
-      )
-  ) {
-    inRow++ && inColumn++;
-    i--;
-  }
-
-  // Koukni do pravého dolního rohu
-
-  // (a) vpravo; (b) dolů
-  while (
-    i < boardSize - 1 &&
-    symbol ===
-      getSymbol(
-        getField(origin.row, i + 1) &&
-          getSymbol(getField(i + 1, origin.column)),
-      )
-  ) {
-    inRow++ && inColumn++;
-    i++;
-  }
-
-  if (inDiagonal1 >= symbolsToWin) {
-    return true;
-  }*/
-
   return false;
 };
