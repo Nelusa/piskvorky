@@ -22,7 +22,9 @@ for (let i = 0; i < gameArea.length; i += 1) {
     if (isWinningMove(gameArea[i]) === true) {
       if (playerOnTurn === 'circle') {
         let winnerAlert = () => {
-          confirm('Vyhrál jsi, křížku! 🥳');
+          confirm(
+            `Vyhrál jsi, křížku! 🥳  ▻▻▻ Chceš si to dát ještě jednou? 👀`,
+          );
           location.reload();
         };
         setTimeout(winnerAlert, 333);
@@ -30,7 +32,9 @@ for (let i = 0; i < gameArea.length; i += 1) {
       }
       if (playerOnTurn === 'cross') {
         const winnerAlert = () => {
-          confirm('Vyhrál jsi, kroužku! 🥳');
+          confirm(
+            `Vyhrál jsi, kroužku! 🥳  ▻▻▻ Chceš si to dát ještě jednou? 👀`,
+          );
           location.reload();
         };
         setTimeout(winnerAlert, 333);
@@ -38,7 +42,8 @@ for (let i = 0; i < gameArea.length; i += 1) {
     }
   });
 }
-// Výhra //
+
+// VÝHRA //
 
 const getSymbol = (field) => {
   if (field.classList.contains('area__field--cross')) {
@@ -48,7 +53,7 @@ const getSymbol = (field) => {
   }
 };
 
-const boardSize = 10; // 10x10
+const boardSize = 10;
 const fields = document.querySelectorAll('.area__btn');
 
 const getField = (row, column) => {
